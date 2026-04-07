@@ -1,288 +1,35 @@
-/* style.css - Jack Freeman Appreciation Page */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-
-/* ── CSS Variables ── */
-:root {
-    --green: #16F529;
-    --light-green: #e6fff0;
-    --pink: #AA336A;
-    --dark: #1a1a1a;
-    --white: #ffffff;
-    --card-bg: rgba(255, 255, 255, 0.85);
-    --shadow: 0 4px 18px rgba(0,0,0,0.12);
-}
-
-/* ── Base ── */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #d4f7dc; /* light readable green */
-    background-image:
-        radial-gradient(circle at 15% 20%, rgba(22,245,41,0.25) 0%, transparent 50%),
-        radial-gradient(circle at 85% 80%, rgba(170,51,106,0.1) 0%, transparent 50%);
+    font-family: 'Luminari', fantasy;
+    background-color: #16F529;
     color: #333;
-    padding: 0;
-    min-height: 100vh;
-}
-
-/* ── Header ── */
-header {
-    background: linear-gradient(135deg, #16F529 0%, #0ac41f 60%, #AA336A 100%);
-    text-align: center;
-    padding: 50px 20px 40px;
-    position: relative;
-    overflow: hidden;
-}
-
-header::before {
-    content: '🐯';
-    font-size: 120px;
-    position: absolute;
-    top: -20px;
-    right: 40px;
-    opacity: 0.18;
-    transform: rotate(15deg);
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 2.8rem;
-    color: var(--pink);
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.15);
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+    color: #AA336A;
+    font-size: 36px;
 }
 
 h2 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.6rem;
-    color: var(--pink);
-    margin: 0 0 14px 0;
-    border-bottom: 3px solid var(--green);
-    padding-bottom: 8px;
+    color: #AA336A;
+    font-size: 24px;
 }
 
 h3 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.15rem;
-    color: var(--pink);
-    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
 }
 
 p {
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    line-height: 1.75;
-    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
 }
 
-/* ── Layout ── */
-.page-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 30px 20px 60px;
-}
-
-/* ── Divs / Cards ── */
-.div-bio {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--green);
-}
-
-.div-appreciation {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--pink);
-}
-
-.div-photos {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--green);
-}
-
-.div-video {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--pink);
-    text-align: center;
-}
-
-.div-table {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--green);
-    overflow-x: auto;
-}
-
-.div-links {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--pink);
-}
-
-/* ── Photo Grid ── */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
-
-.photo-grid figure {
-    margin: 0;
-    text-align: center;
-}
-
-.photo-grid img {
-    width: 25%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid var(--green);
-    transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.photo-grid img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 8px 24px rgba(170,51,106,0.25);
-}
-
-.photo-grid figcaption {
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 5px;
-    font-style: italic;
-}
-
-/* ── Video ── */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 12px;
-    margin-top: 16px;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-    border-radius: 12px;
-}
-
-/* ── Lists ── */
-ul, ol {
-    padding-left: 24px;
-    margin-bottom: 12px;
-}
-
-li {
-    margin-bottom: 6px;
-    line-height: 1.6;
-}
-
-ul li::marker {
-    color: var(--pink);
-}
-
-/* ── Table ── */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 12px;
-    font-size: 0.95rem;
+    border: 1px solid black;
 }
 
 th {
-    background: var(--pink);
+    background-color: #AA336A;
     color: white;
-    padding: 12px 14px;
-    text-align: left;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 0.85rem;
-}
-
-td {
-    padding: 10px 14px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-tr:nth-child(even) td {
-    background: rgba(22, 245, 41, 0.08);
-}
-
-tr:hover td {
-    background: rgba(170, 51, 106, 0.07);
-}
-
-/* ── Links ── */
-a {
-    color: var(--pink);
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s;
-}
-
-a:hover {
-    border-bottom-color: var(--pink);
-}
-
-.link-list {
-    list-style: none;
-    padding: 0;
-}
-
-.link-list li {
-    margin-bottom: 10px;
-    padding: 10px 16px;
-    background: var(--light-green);
-    border-radius: 8px;
-    border-left: 4px solid var(--green);
-}
-
-/* ── Footer ── */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.85rem;
-    color: #666;
-    font-style: italic;
-}
-
-/* ── Subtitle in header ── */
-.header-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.05rem;
-    color: var(--dark);
-    margin-top: 6px;
-    font-style: italic;
 }
